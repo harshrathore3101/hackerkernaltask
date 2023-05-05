@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/user.css" />
+</head>
+<body>
+    <nav>
+      <a href="/userPage">Create User</a>
+      <a href="/taskPage">Create Task</a>
+      <a href="/allUser">All User</a>
+      <a href="/showTable">All Task</a>
+    </nav>
+    <div id="main">
+        <form action="/createTask" method="post">
+            <h1>Create Task</h1>
+            <input type="text" name="name" placeholder="Enter Task Name">
+            <select name="user" class="select" >
+                <% allUsers.forEach((user) =>{ %>
+                    <option value="<%= user._id %>"><%= user.name %></option>
+                <% }) %>
+            </select>
+            <select name="type"  class="select">
+                <option value="Panding">Panding</option>
+                <option value="Done">Done</option>
+            </select>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+</body>
+</html>
