@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/user.css" />
-</head>
-<body>
+  </head>
+  <body>
     <nav>
       <a href="/userPage">Create User</a>
       <a href="/taskPage">Create Task</a>
@@ -16,13 +16,19 @@
       <a href="/showTable">All Task</a>
     </nav>
     <div id="main">
-        <form action="/createUser" method="post">
-            <h1>Create User</h1>
-            <input type="text" name="name" placeholder="Enter Name">
-            <input type="email" name="email" placeholder="Enter Email">
-            <input type="number" name="number" placeholder="Enter Number">
-            <input type="submit" id="submit">
-        </form>
+      <form action="/createUser" method="post">
+        <h1>Create User</h1>
+        <input type="text" name="name" placeholder="Enter Name" />
+        <input type="email" name="email" placeholder="Enter Email" />
+        <input
+          type="text"
+          name="number"
+          pattern="[0-9]{10}"
+          title="please enter the phone number with numbers only"
+          placeholder="Enter Number"
+        />
+        <input type="submit" id="submit" />
+      </form>
     </div>
-</body>
+  </body>
 </html>
